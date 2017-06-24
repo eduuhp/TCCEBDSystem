@@ -1,0 +1,49 @@
+﻿@model IEnumerable<prjEBDSystem.Models.ClassEBD>
+
+@{
+    ViewBag.Title = "Classe";
+}
+
+<h2>Classe</h2>
+
+<p>
+    @Html.ActionLink("Nova Classe", "Create")
+</p>
+
+<span class="label label-success">@TempData["SuccessMsg"]</span>
+<span class="label label-danger">@TempData["ErrorMsg"]</span>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NameClassEBD)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Period)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Departament)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.NameClassEBD)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Period.NamePeriod)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Departament.NameDepartment)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Edit", new { id = item.IdClassEBD }) |
+            @Html.ActionLink("Detalhes", "Details", new { id = item.IdClassEBD }) |
+            @Html.ActionLink("Excluir", "Delete", new { id = item.IdClassEBD })
+        </td>
+    </tr>
+}
+
+</table>

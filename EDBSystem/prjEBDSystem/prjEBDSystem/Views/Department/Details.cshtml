@@ -1,0 +1,33 @@
+﻿@model prjEBDSystem.Models.Department
+
+@{
+    ViewBag.Title = "Detalhes";
+}
+
+<h2>Detalhes</h2>
+
+<div>
+    <h4>Departamento</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NameDepartment)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NameDepartment)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DescriptionDepartment)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DescriptionDepartment)
+        </dd>
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Voltar", "Index", "Department", new { @type = "button", @class = "btn btn-default" })
+    @Html.ActionLink("Editar", "Edit", new { id = Model.IdDepartment }, new { @type = "button", @class = "btn btn-default" })
+</p>

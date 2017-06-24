@@ -1,0 +1,43 @@
+﻿@model IEnumerable<prjEBDSystem.Models.Department>
+
+@{
+    ViewBag.Title = "Departamento";
+}
+
+<h2>Departamento</h2>
+
+<p>
+    @Html.ActionLink("Novo departamento", "Create")
+</p>
+
+<span class="label label-success">@TempData["SuccessMsg"]</span>
+<span class="label label-danger">@TempData["ErrorMsg"]</span>
+
+<table class="table table-responsive table-striped table-hover">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NameDepartment)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DescriptionDepartment)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.NameDepartment)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DescriptionDepartment)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Edit", new { id = item.IdDepartment }) |
+            @Html.ActionLink("Detalhes", "Details", new { id = item.IdDepartment }) |
+            @Html.ActionLink("Excluir", "Delete", new { id = item.IdDepartment })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,43 @@
+﻿@model IEnumerable<prjEBDSystem.Models.Profile>
+
+@{
+    ViewBag.Title = "Perfil";
+}
+
+<h2>Perfil</h2>
+
+<p>
+    @Html.ActionLink("Novo Perfil", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.NameProfile)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Restrictions)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.NameProfile)
+            </td>
+            <td>
+                @foreach (var profile in item.Restrictions)
+                {
+                    @Html.DisplayName(profile.NameRestriction) <span>|</span>
+                }
+            </td>
+            <td>
+                @Html.ActionLink("Editar", "Edit", new { id = item.IdProfile }) |
+                @Html.ActionLink("Detalhes", "Details", new { id = item.IdProfile }) |
+                @Html.ActionLink("Excluir", "Delete", new { id = item.IdProfile })
+            </td>
+        </tr>
+    }
+
+</table>

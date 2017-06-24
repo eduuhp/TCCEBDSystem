@@ -1,0 +1,4 @@
+C:\Users\Lucas Passos\Documents\Visual Studio 2017\Projects\EDBSystem\prjEBDSystem\prjConnectionFactory\bin\Debug\prjConnectionFactory.dll
+C:\Users\Lucas Passos\Documents\Visual Studio 2017\Projects\EDBSystem\prjEBDSystem\prjConnectionFactory\bin\Debug\prjConnectionFactory.pdb
+C:\Users\Lucas Passos\Documents\Visual Studio 2017\Projects\EDBSystem\prjEBDSystem\prjConnectionFactory\obj\Debug\prjConnectionFactory.dll
+C:\Users\Lucas Passos\Documents\Visual Studio 2017\Projects\EDBSystem\prjEBDSystem\prjConnectionFactory\obj\Debug\prjConnectionFactory.pdb

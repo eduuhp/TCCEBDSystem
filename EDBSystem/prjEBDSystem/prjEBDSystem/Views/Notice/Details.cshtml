@@ -1,0 +1,44 @@
+﻿@model prjEBDSystem.Models.Notice
+
+@{
+    ViewBag.Title = "Detalhes";
+}
+
+<h2>Detalhes</h2>
+
+<div>
+    <h4>Notícia</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TitleNotice)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TitleNotice)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ContentNotice)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ContentNotice)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Departments)
+        </dt>
+
+        <dd>
+            @foreach (var department in Model.Departments)
+            {
+               @Html.DisplayName(department.NameDepartment) <span>|</span>
+            }
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Voltar", "Index", "Notice", new { @type = "button", @class = "btn btn-default" })
+    @Html.ActionLink("Editar", "Edit", new { id = Model.IdNotice }, new { @type = "button", @class = "btn btn-default" })
+</p>

@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "prjEBDSystem", "prjEBDSystem\prjEBDSystem.csproj", "{E0326E1F-35DD-4C24-A30E-BDA58F42665D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "prjConnectionFactory", "prjConnectionFactory\prjConnectionFactory.csproj", "{3C0A750F-A831-40EB-8738-FA73ED1768C1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "prjTestes", "prjTestes\prjTestes.csproj", "{3C0C0FFA-F35C-4750-ACD0-6E5DD1827174}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E0326E1F-35DD-4C24-A30E-BDA58F42665D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E0326E1F-35DD-4C24-A30E-BDA58F42665D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E0326E1F-35DD-4C24-A30E-BDA58F42665D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E0326E1F-35DD-4C24-A30E-BDA58F42665D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C0A750F-A831-40EB-8738-FA73ED1768C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C0A750F-A831-40EB-8738-FA73ED1768C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C0A750F-A831-40EB-8738-FA73ED1768C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C0A750F-A831-40EB-8738-FA73ED1768C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C0C0FFA-F35C-4750-ACD0-6E5DD1827174}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C0C0FFA-F35C-4750-ACD0-6E5DD1827174}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C0C0FFA-F35C-4750-ACD0-6E5DD1827174}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C0C0FFA-F35C-4750-ACD0-6E5DD1827174}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 4
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://projetossenai.visualstudio.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = prjConnectionFactory\\prjConnectionFactory.csproj
+		SccProjectName1 = prjConnectionFactory
+		SccLocalPath1 = prjConnectionFactory
+		SccProjectUniqueName2 = prjEBDSystem\\prjEBDSystem.csproj
+		SccProjectName2 = prjEBDSystem
+		SccLocalPath2 = prjEBDSystem
+		SccProjectUniqueName3 = prjTestes\\prjTestes.csproj
+		SccProjectName3 = prjTestes
+		SccLocalPath3 = prjTestes
+	EndGlobalSection
+EndGlobal

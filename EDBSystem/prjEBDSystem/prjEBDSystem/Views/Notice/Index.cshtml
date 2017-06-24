@@ -1,0 +1,54 @@
+﻿@model IEnumerable<prjEBDSystem.Models.Notice>
+
+@{
+    ViewBag.Title = "Notícia";
+}
+
+<h2>Notícia</h2>
+
+<p>
+    @Html.ActionLink("Nova Notícia", "Create")
+</p>
+
+
+<span class="label label-success">@TempData["SuccessMsg"]</span>
+<span class="label label-danger">@TempData["ErrorMsg"]</span>
+
+<table class="table table-responsive table-striped table-hover">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TitleNotice)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ContentNotice)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Departments)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.TitleNotice)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ContentNotice)
+            </td>
+            <td>
+                @foreach (var department in item.Departments)
+                {
+                    @Html.ActionLink(department.NameDepartment, "Details", "Department", new { id = department.IdDepartment },null) <span>|</span>
+                }
+            </td>
+            <td>
+                @Html.ActionLink("Editar", "Edit", new { id = item.IdNotice }) |
+                @Html.ActionLink("Detalhes", "Details", new { id = item.IdNotice }) |
+                @Html.ActionLink("Excluir", "Delete", new { id = item.IdNotice })
+            </td>
+        </tr>
+    }
+
+</table>

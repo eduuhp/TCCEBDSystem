@@ -1,0 +1,68 @@
+﻿@model prjEBDSystem.Models.User
+
+@{
+    ViewBag.Title = "Detalhes";
+}
+
+<h2>Detalhes</h2>
+
+<div>
+    <h4>Usuário</h4>
+    <hr />
+    <dl class="dl-horizontal">
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FirstNameUser)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FirstNameUser)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LastNameUser)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LastNameUser)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateBirthUser)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateBirthUser)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LoginUser)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LoginUser)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Profile)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Profile.NameProfile)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ClassEBD)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ClassEBD.NameClassEBD)
+        </dd>
+
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Voltar", "Index", "User", new { @type = "button", @class = "btn btn-default" })
+    @Html.ActionLink("Editar", "Edit", new { id = Model.IdUser }, new { @type = "button", @class = "btn btn-default" })
+</p>

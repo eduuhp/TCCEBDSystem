@@ -1,0 +1,67 @@
+﻿@model IEnumerable<prjEBDSystem.Models.User>
+
+@{
+    ViewBag.Title = "Usuário";
+}
+
+<h2>Usuário</h2>
+
+<p>
+    @Html.ActionLink("Novo Usuário", "Create")
+</p>
+
+<span class="label label-success">@TempData["SuccessMsg"]</span>
+<span class="label label-danger">@TempData["ErrorMsg"]</span>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.FirstNameUser)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LastNameUser)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DateBirthUser)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LoginUser)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Profile)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ClassEBD)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.FirstNameUser)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LastNameUser)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateBirthUser)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LoginUser)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Profile.NameProfile)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ClassEBD.NameClassEBD)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Edit", new { id=item.IdUser }) |
+            @Html.ActionLink("Detalhes", "Details", new { id=item.IdUser }) |
+            @Html.ActionLink("Excluir", "Delete", new { id = item.IdUser })
+        </td>
+    </tr>
+}
+
+</table>

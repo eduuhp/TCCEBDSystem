@@ -1,0 +1,42 @@
+﻿@model prjEBDSystem.Models.Period
+
+@{
+    ViewBag.Title = "Detalhes";
+}
+
+<h2>Detalhes</h2>
+
+<div>
+    <h4>Período</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.NamePeriod)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NamePeriod)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.StartDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.StartDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EndDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EndDate)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Voltar", "Index", "Period", new { @type = "button", @class = "btn btn-default" })
+    @Html.ActionLink("Editar", "Edit", new { id = Model.IdPeriod }, new { @type = "button", @class = "btn btn-default" }) 
+</p>

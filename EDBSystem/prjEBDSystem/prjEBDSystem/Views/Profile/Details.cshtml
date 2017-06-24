@@ -1,0 +1,38 @@
+﻿@model prjEBDSystem.Models.Profile
+
+@{
+    ViewBag.Title = "Detalhes";
+}
+
+<h2>Detalhes</h2>
+
+<div>
+    <h4>Perfil</h4>
+    <hr />
+    <dl class="dl-horizontal">
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NameProfile)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NameProfile)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Restrictions)
+        </dt>
+
+        <dd>
+            @foreach (var department in Model.Restrictions)
+            {
+                @Html.DisplayName(department.NameRestriction) <span>|</span>
+            }
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Voltar", "Index", "Profile", new { @type = "button", @class = "btn btn-default" })
+    @Html.ActionLink("Editar", "Edit", new { id = Model.IdProfile }, new { @type = "button", @class = "btn btn-default" })
+</p>

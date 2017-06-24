@@ -1,0 +1,59 @@
+﻿@model prjEBDSystem.Models.Notice
+
+@{
+    ViewBag.Title = "Nova";
+}
+
+<h2>Nova Notícia</h2>
+
+
+@using (Html.BeginForm("Save", "Notice"))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <h4>Notícia</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <span class="label label-success">@TempData["SuccessMsg"]</span>
+        <span class="label label-danger">@TempData["ErrorMsg"]</span>
+        <div class="form-group">
+            @Html.LabelFor(model => model.TitleNotice, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.TitleNotice, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.TitleNotice, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.ContentNotice, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.ContentNotice, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.ContentNotice, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Departments, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @foreach (var item in Model.Departments)
+                {
+                    @Html.Label(item.NameDepartment)
+                    <input type="checkbox" @item.Checked name="ids" value="@item.IdDepartment" />
+                }
+
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                @Html.ActionLink("Cancelar", "Index", "Notice", new { @type = "button", @class = "btn btn-default" })
+                <input type="submit"  value="Salvar" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
